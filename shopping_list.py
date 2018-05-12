@@ -7,6 +7,9 @@
 *   And, once I quit, I want the app to show me everything that's
     on my list
 
+*   Enter 'SHOW' to print what's currently on the list
+*   Enter 'HELP' to print a help message about DONE, SHOW, and HELP
+
 https://teamtreehouse.com/library/shopping-list-introduction
 """
 
