@@ -8,3 +8,16 @@
 
 https://teamtreehouse.com/library/number-game-introduction
 """
+
+import random
+
+secret = random.randint(1, 10)
+
+print("Guess a number from 1 to 10:")
+while True:
+    guess = int(input('>>> '))
+    if guess == secret:
+        print("Correct!")
+        break
+    else:
+        print("Incorrect. Guess again:")
