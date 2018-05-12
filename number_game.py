@@ -16,8 +16,10 @@ secret = random.randint(1, 10)
 print("Guess a number from 1 to 10:")
 while True:
     guess = int(input('>>> '))
-    if guess == secret:
+    if guess < secret:
+        print("Too low. Guess again:")
+    elif guess > secret:
+        print("Too high. Guess again:")
+    else:
         print("Correct!")
         break
-    else:
-        print("Incorrect. Guess again:")
