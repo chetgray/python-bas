@@ -17,20 +17,23 @@ https://teamtreehouse.com/library/number-game-introduction
 
 import random
 
-secret = random.randint(1, 10)
+def game():
+    secret = random.randint(1, 10)
 
-print("Guess a number from 1 to 10:")
-while True:
-    try:
-        guess = int(input('>>> '))
-    except ValueError:
-        print("Please enter a number:")
-        continue
+    print("Guess a number from 1 to 10:")
+    while True:
+        try:
+            guess = int(input('>>> '))
+        except ValueError:
+            print("Please enter a number:")
+            continue
 
-    if guess < secret:
-        print("Too low. Guess again:")
-    elif guess > secret:
-        print("Too high. Guess again:")
-    else:
-        print("Correct!")
-        break
+        if guess < secret:
+            print("Too low. Guess again:")
+        elif guess > secret:
+            print("Too high. Guess again:")
+        else:
+            print("Correct!")
+            break
+
+game()
