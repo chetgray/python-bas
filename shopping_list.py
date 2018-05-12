@@ -16,3 +16,5 @@ user_input = ""
 while user_input != 'DONE':
     user_input = input("Enter an item to add to the list, or 'DONE' to quit: ")
     shopping_list.append(user_input)
+
+print(shopping_list)
