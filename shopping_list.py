@@ -35,7 +35,7 @@ while True:
         print_list()
     elif user_input == 'HELP':
         print_help()
-    else:
+    elif user_input:
         shopping_list.append(user_input)
 
 print_list()
