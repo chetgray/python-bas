@@ -20,6 +20,12 @@ def print_list():
     for item in shopping_list:
         print(u" ☐ {}".format(item))
 
+def print_help():
+    print("""Special commands:
+DONE    quit, printing what is on the list
+HELP    print this help message
+SHOW    print what is currently on the list""")
+
 print("Add items to your list,\nor enter 'DONE' to quit:")
 while True:
     user_input = input(">>> ")
