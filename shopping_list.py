@@ -12,12 +12,13 @@ https://teamtreehouse.com/library/shopping-list-introduction
 
 shopping_list = []
 
+print("Add items to your list,\nor enter 'DONE' to quit:")
 while True:
-    user_input = input("Enter an item to add to the list, or 'DONE' to quit: ")
+    user_input = input(">>> ")
     if user_input == 'DONE':
         break
     shopping_list.append(user_input)
 
-print("Here's everything that's on your list:")
+print("\nHere's everything that's on your list:")
 for item in shopping_list:
     print(u" ☐ {}".format(item))
