@@ -16,12 +16,16 @@ https://teamtreehouse.com/library/number-game-introduction
 """
 
 import random
+from math import sqrt
+
+min_num = 1
+max_num = 10
 
 def game():
-    secret = random.randint(1, 10)
+    secret = random.randint(min_num, max_num)
 
     print("Guess a number from 1 to 10:")
-    for guess_num in range(5, 0, -1):
+    for guess_num in range(int(sqrt(max_num - min_num)), 0, -1):
         while True:
             try:
                 guess = int(input('({} guesses remain) >>> '.format(guess_num)))
