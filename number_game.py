@@ -6,6 +6,12 @@
 *   compare guess to secret number
 *   print hit/miss
 
+Refinement:
+*   Limit the number of guesses
+*   Catch when someone submits a non-integer
+*   Print "too low" or "too high" messages for bad guesses
+*   Let people play again
+
 https://teamtreehouse.com/library/number-game-introduction
 """
 
