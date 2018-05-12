@@ -31,6 +31,11 @@ while True:
     user_input = input(">>> ")
     if user_input == 'DONE':
         break
-    shopping_list.append(user_input)
+    if user_input == 'SHOW':
+        print_list()
+    elif user_input == 'HELP':
+        print_help()
+    else:
+        shopping_list.append(user_input)
 
 print_list()
