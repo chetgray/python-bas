@@ -13,6 +13,7 @@
 https://teamtreehouse.com/library/shopping-list-introduction
 """
 
+instructions = "\nAdd items to your list,\nor enter 'DONE' to quit:"
 shopping_list = []
 
 def print_list():
@@ -21,20 +22,23 @@ def print_list():
         print(u" ☐ {}".format(item))
 
 def print_help():
-    print("""Special commands:
+    print("""
+Special commands:
 DONE    quit, printing what is on the list
 HELP    print this help message
 SHOW    print what is currently on the list""")
 
-print("Add items to your list,\nor enter 'DONE' to quit:")
+print(instructions)
 while True:
     user_input = input(">>> ")
     if user_input == 'DONE':
         break
     if user_input == 'SHOW':
         print_list()
+        print(instructions)
     elif user_input == 'HELP':
         print_help()
+        print(instructions)
     elif user_input:
         shopping_list.append(user_input)
 
