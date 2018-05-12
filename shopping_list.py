@@ -9,3 +9,7 @@
 
 https://teamtreehouse.com/library/shopping-list-introduction
 """
+
+user_input = ""
+while user_input != 'DONE':
+    user_input = input("Enter an item to add to the list, or 'DONE' to quit: ")
