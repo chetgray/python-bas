@@ -21,12 +21,15 @@ def game():
     secret = random.randint(1, 10)
 
     print("Guess a number from 1 to 10:")
-    while True:
-        try:
-            guess = int(input('>>> '))
-        except ValueError:
-            print("Please enter a number:")
-            continue
+    for guess_num in range(5, 0, -1):
+        while True:
+            try:
+                guess = int(input('({} guesses remain) >>> '.format(guess_num)))
+            except ValueError:
+                print("Please enter a number:")
+                continue
+            else:
+                break
 
         if guess < secret:
             print("Too low. Guess again:")
@@ -35,6 +38,8 @@ def game():
         else:
             print("Correct!")
             break
+    else:
+        print("Sorry, you ran out of guesses.")
 
 playing = True
 while playing:
