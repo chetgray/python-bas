@@ -12,9 +12,10 @@ https://teamtreehouse.com/library/shopping-list-introduction
 
 shopping_list = []
 
-user_input = ""
-while user_input != 'DONE':
+while True:
     user_input = input("Enter an item to add to the list, or 'DONE' to quit: ")
+    if user_input == 'DONE':
+        break
     shopping_list.append(user_input)
 
 print(shopping_list)
