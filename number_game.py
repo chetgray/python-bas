@@ -15,14 +15,14 @@ Refinement:
 https://teamtreehouse.com/library/number-game-introduction
 """
 
-import random
+from random import randint
 from math import sqrt
 
 min_num = 1
 max_num = 10
 
 def game():
-    secret = random.randint(min_num, max_num)
+    secret = randint(min_num, max_num)
 
     print("Guess a number from 1 to 10:")
     for guess_num in range(int(sqrt(max_num - min_num)), 0, -1):
