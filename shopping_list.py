@@ -18,4 +18,6 @@ while True:
         break
     shopping_list.append(user_input)
 
-print(shopping_list)
+print("Here's everything that's on your list:")
+for item in shopping_list:
+    print(u" ☐ {}".format(item))
