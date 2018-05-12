@@ -39,7 +39,7 @@ def game():
             print("Correct!")
             break
     else:
-        print("Sorry, you ran out of guesses.")
+        print("Sorry, you ran out of guesses. The number was {}.".format(secret))
 
 playing = True
 while playing:
