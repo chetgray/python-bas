@@ -36,4 +36,16 @@ def game():
             print("Correct!")
             break
 
-game()
+playing = True
+while playing:
+    game()
+    again = None
+    while True:
+        again = input("Would you like to play again? [y/N]: ").lower()
+        if again in ('y', 'yes'):
+            break
+        elif again in ('n', 'no', ''):
+            playing = False
+            break
+        else:
+            print("Invalid selection.")
