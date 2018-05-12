@@ -15,6 +15,11 @@ https://teamtreehouse.com/library/shopping-list-introduction
 
 shopping_list = []
 
+def print_list():
+    print("\nHere's everything that's on your list:")
+    for item in shopping_list:
+        print(u" ☐ {}".format(item))
+
 print("Add items to your list,\nor enter 'DONE' to quit:")
 while True:
     user_input = input(">>> ")
@@ -22,6 +27,4 @@ while True:
         break
     shopping_list.append(user_input)
 
-print("\nHere's everything that's on your list:")
-for item in shopping_list:
-    print(u" ☐ {}".format(item))
+print_list()
