@@ -12,3 +12,10 @@ chances.
 *   draw guessed letters and strikes
 *   print out win/lose
 """
+
+words = ['jazzy', 'joked', 'jives', 'joker', 'fazes', 'foxed', 'hazes', 'faxed', 'jokes', 'faxes', 'foxes', 'waxes', 'fazed', 'babes',
+         'jazzed', 'joking', 'fazing', 'faxing', 'jinxed', 'faking', 'hazing',
+         'buzzing', 'jinxing', 'waxwing', 'quaking', 'queuing', 'skyjack', 'jaywalk',
+         'jazziest', 'kookiest', 'alkaline', 'alkalize', 'revivify',
+         'bubbliest', 'overjoyed', 'skyjacker', 'jaywalker',
+         'zigzagging', 'revivified', 'skyjacking', 'jaywalking', 'alkalizing']
