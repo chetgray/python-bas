@@ -20,6 +20,7 @@ words = ['jazzy', 'joked', 'jives', 'joker', 'fazes', 'foxed', 'hazes', 'faxed',
          'buzzing', 'jinxing', 'waxwing', 'quaking', 'queuing', 'skyjack', 'jaywalk',
          'jazziest', 'kookiest', 'alkaline', 'alkalize', 'revivify',
          'bubbliest', 'overjoyed', 'skyjacker', 'jaywalker',
-         'zigzagging', 'revivified', 'skyjacking', 'jaywalking', 'alkalizing']
+         'zigzagging', 'revivified', 'skyjacking', 'jaywalking', 'alkalizing',
+         'apple', 'banana', 'orange','coconut', 'strawberry', 'lime', 'grapefruit', 'lemon', 'kumquat', 'blueberry', 'melon']
 
 secret = random.choice(words)
