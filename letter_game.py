@@ -23,4 +23,14 @@ words = ['jazzy', 'joked', 'jives', 'joker', 'fazes', 'foxed', 'hazes', 'faxed',
          'zigzagging', 'revivified', 'skyjacking', 'jaywalking', 'alkalizing',
          'apple', 'banana', 'orange','coconut', 'strawberry', 'lime', 'grapefruit', 'lemon', 'kumquat', 'blueberry', 'melon']
 
-secret = random.choice(words)
+while True:
+    play = input("Would you like to play a game? [Y/n]: ").lower()
+    if play in ('y', 'yes', ''):
+        pass
+    elif play in ('n', 'no'):
+        break
+    else:
+        print("Invalid selection.")
+        continue
+
+    secret = random.choice(words)
