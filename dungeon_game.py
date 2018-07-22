@@ -27,11 +27,20 @@ def init_locations():
 
 
 def get_moves(player):
-    moves = ["LEFT", "RIGHT", "UP", "DOWN"]
-    # if y == 0, can't move up
-    # if y == max, can't move down
+    moves = {"LEFT", "RIGHT", "UP", "DOWN"}
     # if x == 0, can't move left
     # if x == max, can't move right
+    # if y == 0, can't move up
+    # if y == max, can't move down
+    if player[0] == 0:
+        moves.discard("LEFT")
+    elif player[0] == X_SIZE-1:
+        moves.discard("RIGHT")
+    if player[1] == 0:
+        moves.discard("UP")
+    elif player[1] == Y_SIZE-1:
+        moves.discard("DOWN")
+
     return moves
 
 
@@ -63,7 +72,7 @@ if __name__ == '__main__':
     while True:
         print("Welcome to the dungeon!")
         print(f"You're currently in room {player}")
-        print("You can move {}") # fill with available moves
+        print(f"You can move {', '.join(get_moves(player))}")
         print("Enter QUIT to quit")
 
         move = input("> ").upper()
