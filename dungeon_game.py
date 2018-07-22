@@ -12,13 +12,16 @@
 # clear screen and redraw grid
 
 
+from random import sample
+
+
 X_SIZE = Y_SIZE = 5
 CELLS = [(x, y) for y in range(Y_SIZE) for x in range(X_SIZE)]
 
 
 def init_locations():
     """Pick random locations for player, exit door, and monster"""
-    player = door = monster = None
+    player, door, monster = sample(CELLS, k=3)
 
     return player, door, monster
 
@@ -42,9 +45,11 @@ def move_player(player, move):
 
 
 if __name__ == '__main__':
+    player, door, monster = init_locations()
+
     while True:
         print("Welcome to the dungeon!")
-        print("You're currently in room {}") # fill with player position
+        print(f"You're currently in room {player}")
         print("You can move {}") # fill with available moves
         print("Enter QUIT to quit")
 
