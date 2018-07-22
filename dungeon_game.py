@@ -12,6 +12,7 @@
 # clear screen and redraw grid
 
 
+import os
 from random import randint, sample
 
 
@@ -24,6 +25,10 @@ def init_locations():
     player, door, monster = sample(CELLS, k=3)
 
     return player, door, monster
+
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def draw_grid(player, door, monster):
@@ -79,6 +84,7 @@ if __name__ == '__main__':
     player, door, monster = init_locations()
 
     while True:
+        clear_screen()
         draw_grid(player, door, monster)
         print("Welcome to the dungeon!")
         print(f"You're currently in room {player}")
