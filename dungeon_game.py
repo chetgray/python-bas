@@ -18,6 +18,10 @@ from random import randint, sample
 
 X_SIZE = Y_SIZE = 5
 CELLS = [(x, y) for y in range(Y_SIZE) for x in range(X_SIZE)]
+MOVES_MAP = {"LEFT": (-1, 0),
+             "RIGHT": (+1, 0),
+             "UP": (0, -1),
+             "DOWN": (0, +1)}
 
 
 def init_locations():
@@ -58,19 +62,21 @@ def get_moves(player):
     return moves
 
 
+def clip(val, val_min, val_max):
+    """Constrain value between minimum and maximum"""
+    return min(val_max, max(val_min, val))
+
+
 def move_player(player, move):
     # get the player's location
     # LEFT, x-1
     # RIGHT, x+1
     # UP, y-1
     # DOWN, y+1
-
+    diff = MOVES_MAP[move]
+    player = (clip(player[0] + diff[0], 0, X_SIZE-1),
+              clip(player[1] + diff[1], 0, Y_SIZE-1))
     return player
-
-
-def clip(val, val_min, val_max):
-    """Constrain value between minimum and maximum"""
-    return min(val_max, max(val_min, val))
 
 
 def move_monster(monster):
@@ -84,17 +90,21 @@ if __name__ == '__main__':
     player, door, monster = init_locations()
 
     while True:
+        valid_moves = get_moves(player)
+
         clear_screen()
         draw_grid(player, door, monster)
         print("Welcome to the dungeon!")
         print(f"You're currently in room {player}")
-        print(f"You can move {', '.join(get_moves(player))}")
+        print(f"You can move {', '.join(valid_moves)}")
         print("Enter QUIT to quit")
 
         move = input("> ").upper()
 
         if move == "QUIT":
             break
+        elif move in valid_moves:
+            player = move_player(player, move)
 
         # Good move? Change player position
         # Bad move? Don't change anything
