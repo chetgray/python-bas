@@ -46,20 +46,20 @@ def draw_grid(player, door, monster):
 
 
 def get_moves(player):
-    moves = {"LEFT", "RIGHT", "UP", "DOWN", "WAIT"}
+    moves = ["LEFT", "RIGHT", "UP", "DOWN", "WAIT"]
     # if x == 0, can't move left
     # if x == max, can't move right
     # if y == 0, can't move up
     # if y == max, can't move down
     x, y = player
     if x == 0:
-        moves.discard("LEFT")
+        moves.remove("LEFT")
     elif x == X_SIZE-1:
-        moves.discard("RIGHT")
+        moves.remove("RIGHT")
     if y == 0:
-        moves.discard("UP")
+        moves.remove("UP")
     elif y == Y_SIZE-1:
-        moves.discard("DOWN")
+        moves.remove("DOWN")
 
     return moves
 
