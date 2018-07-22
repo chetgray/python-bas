@@ -105,6 +105,7 @@ if __name__ == '__main__':
             break
         elif move in valid_moves:
             player = move_player(player, move)
+            monster = move_monster(monster)
 
         # Good move? Change player position
         # Bad move? Don't change anything
