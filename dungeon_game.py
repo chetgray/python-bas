@@ -51,13 +51,14 @@ def get_moves(player):
     # if x == max, can't move right
     # if y == 0, can't move up
     # if y == max, can't move down
-    if player[0] == 0:
+    x, y = player
+    if x == 0:
         moves.discard("LEFT")
-    elif player[0] == X_SIZE-1:
+    elif x == X_SIZE-1:
         moves.discard("RIGHT")
-    if player[1] == 0:
+    if y == 0:
         moves.discard("UP")
-    elif player[1] == Y_SIZE-1:
+    elif y == Y_SIZE-1:
         moves.discard("DOWN")
 
     return moves
