@@ -23,6 +23,15 @@ def init_locations():
     return player, door, monster
 
 
+def get_moves(player):
+    moves = ["LEFT", "RIGHT", "UP", "DOWN"]
+    # if y == 0, can't move up
+    # if y == max, can't move down
+    # if x == 0, can't move left
+    # if x == max, can't move right
+    return moves
+
+
 def move_player(player, move):
     # get the player's location
     # LEFT, x-1
