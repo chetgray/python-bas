@@ -12,6 +12,10 @@
 # clear screen and redraw grid
 
 
+X_SIZE = Y_SIZE = 5
+CELLS = [(x, y) for y in range(Y_SIZE) for x in range(X_SIZE)]
+
+
 def init_locations():
     """Pick random locations for player, exit door, and monster"""
     player = door = monster = None
