@@ -26,6 +26,15 @@ def init_locations():
     return player, door, monster
 
 
+def draw_grid(player, door, monster):
+    grid = [['.'] * X_SIZE for y in range(Y_SIZE)]
+    grid[player[1]][player[0]] = '@'
+    grid[door[1]][door[0]] = '<'
+    grid[monster[1]][monster[0]] = 'M'
+
+    print('\n'.join(''.join(r) for r in grid))
+
+
 def get_moves(player):
     moves = {"LEFT", "RIGHT", "UP", "DOWN"}
     # if x == 0, can't move left
@@ -70,6 +79,7 @@ if __name__ == '__main__':
     player, door, monster = init_locations()
 
     while True:
+        draw_grid(player, door, monster)
         print("Welcome to the dungeon!")
         print(f"You're currently in room {player}")
         print(f"You can move {', '.join(get_moves(player))}")
