@@ -23,6 +23,15 @@ def init_locations():
     return player, door, monster
 
 
+def move_player(player, move):
+    # get the player's location
+    # LEFT, x-1
+    # RIGHT, x+1
+    # UP, y-1
+    # DOWN, y+1
+    return player
+
+
 if __name__ == '__main__':
     while True:
         print("Welcome to the dungeon!")
