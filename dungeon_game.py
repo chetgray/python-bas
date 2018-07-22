@@ -95,6 +95,14 @@ if __name__ == '__main__':
 
         clear_screen()
         draw_grid(player, door, monster)
+
+        if player == door:
+            print("Congratulations! You've escaped the dungeon!")
+            break
+        elif player == monster:
+            print("You've been eaten by a grue.")
+            break
+
         print("Welcome to the dungeon!")
         print(f"You're currently in room {player}")
         print(f"You can move {', '.join(valid_moves)}")
