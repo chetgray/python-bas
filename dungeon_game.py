@@ -21,7 +21,8 @@ CELLS = [(x, y) for y in range(Y_SIZE) for x in range(X_SIZE)]
 MOVES_MAP = {"LEFT": (-1, 0),
              "RIGHT": (+1, 0),
              "UP": (0, -1),
-             "DOWN": (0, +1)}
+             "DOWN": (0, +1),
+             "WAIT": (0, 0)}
 
 
 def init_locations():
@@ -45,7 +46,7 @@ def draw_grid(player, door, monster):
 
 
 def get_moves(player):
-    moves = {"LEFT", "RIGHT", "UP", "DOWN"}
+    moves = {"LEFT", "RIGHT", "UP", "DOWN", "WAIT"}
     # if x == 0, can't move left
     # if x == max, can't move right
     # if y == 0, can't move up
