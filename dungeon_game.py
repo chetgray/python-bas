@@ -12,7 +12,7 @@
 # clear screen and redraw grid
 
 
-from random import sample
+from random import randint, sample
 
 
 X_SIZE = Y_SIZE = 5
@@ -41,7 +41,20 @@ def move_player(player, move):
     # RIGHT, x+1
     # UP, y-1
     # DOWN, y+1
+
     return player
+
+
+def clip(val, val_min, val_max):
+    """Constrain value between minimum and maximum"""
+    return min(val_max, max(val_min, val))
+
+
+def move_monster(monster):
+    """Move monster to a random adjacent cell"""
+    monster = (clip(monster[0] + randint(-1, 1), 0, X_SIZE-1),
+               clip(monster[1] + randint(-1, 1), 0, Y_SIZE-1))
+    return monster
 
 
 if __name__ == '__main__':
